@@ -1,5 +1,9 @@
-<<<<<<< HEAD
+
 huadeebro third forth
-=======
+
 the dev version 2233
->>>>>>> dev
+
+huadeebro second version
+dev-lx hhhhh
+devlx 	qiuligao
+
