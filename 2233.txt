@@ -1,8 +1,8 @@
 huadeebro second version
-<<<<<<< HEAD
+
 feature-lx£¡
 
-=======
+
 huadeebro ten version
->>>>>>> 4750c658c531a3036268152b45f2b7550f5d5df1
+
 hhhh
