@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 huadeebro third forth
+=======
+the dev version 2233
+>>>>>>> dev
