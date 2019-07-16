@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>李丙涛</title>
+    <style type="text/css">
+        .clearfix:after {
+            content: ".";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+        
+        .clearfix {
+            display: inline-block;
+        }
+        /*  Hides from IE-mac  \*/
+        
+        *html .clearfix {
+            height: 1%;
+        }
+        
+        .clearfix {
+            display: block;
+        }
+        
+        body {
+            font: 12px/1.5 tahoma, arial, "Hiragino Sans GB", "\5b8b\4f53", sans-serif;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .tabs>ul {
+            background-color: #f6f6f6;
+            border: 1px solid #e5e5e5;
+        }
+        
+        .tabs>ul>li {
+            float: left;
+            height: 44px;
+            line-height: 44px;
+            border-right: 1px solid #e5e5e5;
+            padding: 0 25px;
+        }
+        
+        .tabs>ul>li.selected {
+            border-top: 2px solid #ff4400;
+            margin: -1px 0;
+            line-height: 42px;
+            background-color: #fff;
+        }
+        
+        .tabs>ul>li.selected>a {
+            color: #ff4400;
+        }
+        
+        .tabs>ul>li>a {
+            color: #3c3c3c;
+            font-size: 14px;
+        }
+        
+        .tabs>ul>li>span {
+            color: #ff4400;
+            font-weight: 800;
+            margin-left: 3px;
+        }
+        
+        .panel {
+            display: none;
+        }
+        
+        .tabs>.show {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="js" class="tabs">
+        <ul class="clearfix">
+            <li class="selected"><a href="#tab-1">宝贝详情1</a></li>
+            <li><a href="#tab-2">宝贝详情2</a><span>999+</span></li>
+            <li><a href="#tab-3">宝贝详情3</a></li>
+        </ul>
+        <div class="panel show" id="tab-1">宝贝详情1</div>
+        <div class="panel" id="tab-2">宝贝详情2</div>
+        <div class="panel" id="tab-3">宝贝详情3</div>
+    </div>
+
+    <script>
+        var a=document.getElementById("js");
+        var b=a.getElementsByTagName("li");
+        var c=a.getElementsByTagName("div");
+        b[0].firstChild.addEventListener("click",fun1);
+        b[1].firstChild.addEventListener("click",fun2);
+        b[2].firstChild.addEventListener("click",fun3);
+
+        function resetb(){
+            for(var i=0;i<b.length;i++){
+                b[i].removeAttribute("class");
+            }
+        }
+
+        function resetc(){
+            for(var i=0;i<c.length;i++){
+                c[i].setAttribute("class","panel");
+            }
+        }
+        function fun1(){
+            resetb();
+            resetc();
+            b[0].setAttribute("class","selected");
+            // b[1].setAttribute("class",null);
+            // b[2].setAttribute("class",null);
+            c[0].setAttribute("class","panel show");
+            // c[1].setAttribute("class","panel");
+            // c[2].setAttribute("class","panel");
+        }
+
+        function fun2(){
+            resetb();
+            resetc();
+            b[1].setAttribute("class","selected");
+            // b[0].setAttribute("class",null);
+            // b[2].setAttribute("class",null);
+            c[1].setAttribute("class","panel show");
+            // c[0].setAttribute("class","panel");
+            // c[2].setAttribute("class","panel");
+        }
+
+        function fun3(){
+            resetb();
+            resetc();
+            b[2].setAttribute("class","selected");
+            // b[1].setAttribute("class",null);
+            // b[0].setAttribute("class",null);
+            c[2].setAttribute("class","panel show");
+            // c[1].setAttribute("class","panel");
+            // c[0].setAttribute("class","panel");
+        }
+    </script>
+</body>
+
+</html>
