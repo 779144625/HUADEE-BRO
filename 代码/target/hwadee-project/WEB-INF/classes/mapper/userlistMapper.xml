@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hwadee.dao.UserListDao">
+
+
+	<sql id="a">
+		userId,name,password,picUrl,userType,phoneNum,address
+	</sql>
+
+	<select id="findByID" parameterType="String" resultType="com.hwadee.model.UserList">
+        select
+        <include refid="a"></include>
+        from userlist
+        where userId = #{id}
+    </select>
+	
+	<select id="findAll" parameterType="int" resultType="com.hwadee.model.UserList">
+		SELECT 
+		<include refid="a"></include>
+		 FROM userlist
+	</select>
+	
+	<insert id="insert" parameterType="com.hwadee.model.UserList" useGeneratedKeys="true" keyProperty="userID">
+		INSERT INTO 
+			userlist(userID,name,password,userType,phoneNum,address)
+		VALUES(#{userId},#{name},#{password},#{userType},#{phoneNum},#{address})
+	</insert>
+	
+	<delete id="delete" parameterType="int">
+		DELETE userlist  WHERE userID = #{id}
+	</delete>
+
+	<update id="update" parameterType="com.hwadee.model.UserList">
+		update userlist
+		<trim prefix="SET" suffixOverrides=",">
+			<if test="address != null and address != ''">
+				address = #{address},
+			</if>
+			<if test="password != null and password != ''">
+				password = #{password},
+			</if>
+			<if test="picUrl!=null and picUrl!=''">
+				picUrl=#{picUrl},
+			</if>
+			<if test="phoneNum!=null and phoneNum!= ''">
+				phoneNum=#{phoneNum},
+			</if>
+			<if test="userType!=null and userType!= ''">
+				userType=#{userType}
+			</if>
+		</trim>
+		where userId = #{userId}
+	</update>
+
+
+</mapper>

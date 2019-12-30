@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>新闻发布系统</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family:"Microsoft YaHei", "微软雅黑", "consolas";
+      background: url(image/green1.jpg);
+    }
+    a {
+      text-decoration: none;
+      color: #000;
+    }
+    .clearfix { 
+      *zoom: 1; 
+    }
+    .clearfix:before, .clearfix:after { 
+      display: table; 
+      line-height: 0; 
+      content: "";
+    }
+    .clearfix:after { 
+      clear: both;
+    } 
+
+    .container {
+      width: 1000px;
+      margin: 0 auto;
+    }
+    #web p{
+      display: inline-block;
+    }
+    #web a{
+      text-decoration: none;
+      color:#000;
+    }
+    #web p,#web a{
+      position:relative;
+      left:20px;
+    }
+    #web p:nth-of-type(1),#web p:nth-of-type(5){
+      color:green;
+    }
+    .container h1{
+      margin:10px 0 50px 0;
+      font-style: italic;
+      color:green;
+      font-size: 50px;
+      font-weight: 500;
+      -webkit-text-stroke: 2.0px #666;
+      text-shadow:#666 5px 5px 5px;
+      letter-spacing: 5px;
+    } 
+    .index-bg {
+      width: 100%;
+      height: 500px;
+      
+      position: absolute;
+      top: -50px;
+      z-index: -10;
+    }
+    
+    .news-list {
+      margin: 50px 0;
+      background-color: #fff;
+      border-radius: 5px;
+      border: 1px solid #DDD;
+      padding: 30px 20px;
+      
+      min-height: 300px;
+    }
+    .news-list:hover {
+      box-shadow: 0 0 5px 3px #CCC;
+    }
+    
+    .about .about-des {
+      border-left: 5px solid #CCC;
+      margin-top: 15px;
+    }
+    
+    .about .about-des p {
+      padding-left: 10px;
+      line-height: 28px;
+      text-indent: 2em;
+    }
+    
+    .news-list-left {
+      float: left;
+      width: 729px;
+      margin-bottom: 50px;
+    }
+    
+    .news-list-right {
+      float: right;
+      width: 229px;
+    }
+    
+    .news-list-item {
+      padding: 20px 30px;
+    }
+    
+    .author-time {
+      font-size: 14px;
+    }
+    .news-des {
+      padding-bottom: 20px;
+      border-bottom: 2px solid #CCC;
+    }
+    .news-title {
+      font-size: 23px;
+    }
+    .news-title i {
+      display: inline-block;
+      width: 47px;
+      height: 43px;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+    .news-title a {
+      color: green;
+    }
+    .news-title a:hover {
+      text-decoration: underline;
+    }
+    .news-content-des {
+      line-height: 28px;
+    }
+    
+    .copyright {
+      clear: both;
+      text-align: center;
+      color: gray;
+      
+      border-top: 2px solid #CCC;
+      margin-top: 50px;
+      padding: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="web">
+    <p>您当前的位置:</p>
+    <a href="login.html">登录页面</a>
+    <p> > </p>
+    <a href="main.html">主页面</a>
+    <p> > </p>
+    <a href="news.html">查阅新闻</a>
+    <p> > </p>
+    <p>浏览新闻</p>&nbsp;&nbsp;
+  </div>
+
+  <div class="container">
+    <h1>新闻发布系统</h1>
+    <h4></h4>
+    
+    <div class="news-list">
+      <div class="news-list-left">
+       
+        <div class="news-list-item">
+          <div class="author-time">
+            <span>后勤保障部</span> 发表于 <span>2019-07-26 12:00:30</span>
+          </div>
+          <div class="news-des">
+            <h3 class="news-title"><i></i><a href="#">后勤保障部召开支部工会研讨会</a></h3>
+            <div class="news-content-des">
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp7月21日晚，后勤保障部在夹金山干部学院召开支部工作研讨会，加强和改进基层党建工作，全面推进支部标准化规范化建设。后勤保障部党委中心组成员、党支部委员参加会议。
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp后勤保障部党委书记柳运西以《认真学习贯彻新版<中国共产党支部工作条例（试行）>》为题，为党委中心组成员、新任支部委员讲授了一堂精彩的党课。柳运西从党支部职责定位和工作原则、组织设置、基本任务、工作机制、组织生活、委员会建设等方面展开解读，帮助参会人员进一步读懂弄通《条例》精神实质。他要求，要把学习宣传贯彻《条例》作为当前加强党的基层组织建设的重要内容和基本任务，中心组带头学习，各支部辅导解读，确保把《条例》精神传达到每一名党员。<br/>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp各党支部分别就上半年工作开展情况、下半年工作安排部署进行了发言，将取得的成绩、总结的经验、遇到的问题在会上进行了分享。与会人员积极发言、交流经验，共同探讨如何解决支部建设过程中遇到的不足。<br/>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp此次研讨会是后勤保障部党支部和支委调整后的第一次集体会议，全体支部委员表示，将继续发挥党建引领作用，加强思想政治建设，促进业务与党建融合发展，做好后勤保障工作，打造服务育人阵地。
+            </div>
+          </div>
+        </div>
+        
+        <div class="news-list-item">
+          <div class="author-time">
+            <span>数学学院</span> 发表于 <span>2019-07-19 20:05:10</span>
+          </div>
+          <div class="news-des">
+            <h3 class="news-title"><i></i><a href="#">数学学院召开暑期安全工作会议</a></h3>
+            <div class="news-content-des">
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp7月15日，数学科学学院举行暑期安全工作会议，对有关工作进行强调和部署。院党委书记周军、副书记赵文丽，学院各办公室负责人参加会议。<br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp会上，周军要求全体工作人员以高度的责任意识和担当意识，做好假期轮休值班工作，消除安全隐患，及时处理各项安全问题。要切实把安全责任抓在手上、扛在肩上；高度重视和抓好安全工作，杜绝安全事故发生。<br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp赵文丽强调，暑假期间各值班老师在思想上要提高安全意识，时刻保持高度警惕。不仅要加强学院办公区域的检查与巡视，还要提高对意识形态安全工作的认识，确保意识形态领域的安全。学院各个科室分别对暑假安全工作的重点、隐患点及风险点等进行了充分交流。
+            </div>
+          </div>
+        </div>
+
+        <div class="news-list-item">
+          <div class="author-time">
+            <span>党委学工部 </span> 发表于 <span>2019-07-10 10:59:55</span>
+          </div>
+          <div class="news-des">
+            <h3 class="news-title"><i></i><a href="#">2019年迎新、开学典礼、新生军训工作协调会召开</a></h3>
+            <div class="news-content-des">
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp7月9日，2019年迎新、开学典礼、新生军训工作协调会在清水河校区召开，校党委副书记申小蓉主持会议，学校19个相关职能部门的负责人参会。<br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp申小蓉对迎新工作中的重要时间点和新变化进行了强调，她指出迎新工作是学校的一项重要工作，也是展示学校管理水平和师生风貌的窗口和平台。今年迎新工作存在新变化、新考验，各部门需引起高度重视，全力以赴做好迎新工作，并按照学校的安排和部署，通力配合、认真组织，确保迎新工作高效、安全、有序开展。<br>
+              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp党委学生工作部部长钱云光介绍了2019年迎新、开学典礼、军训工作的筹备进展情况和各部门分工安排及注意事项。
+              研究生管理处副处长李阳、国际合作与交流处副处长曾其刚分别介绍了我校研究生和国际留学生迎新工作的进展情况。
+              与会的各部门负责人还就新生接待、新生体检、氛围营造、安全保障等事项进行了充分沟通和协调。
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="news-list-right">
+        <div class="about">
+          <h4>关于我们</h4>
+          <div class="about-des">
+            <p>我们致力于及时为学生提供最新的信息，并且能够帮助有需要的人发表文章。如果有问题或者要发表文章请私信或者邮箱联系我们，我们一定会仔细阅读，给您一个良好的答复。</p>
+          </div>
+        </div>
+      </div>
+      
+              <footer class="copyright">
+        <p>Copyright © 2019/8/1 All rights reserved.&nbsp;&nbsp;JavaEE第四小组&nbsp;&nbsp;</p>
+              </footer>
+          </div>
+      </div>
+  </body>
+</html>

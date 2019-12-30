@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hwadee.dao.StaffListDao">
+
+
+<sql id="a">
+   staffID,staffName,workStatus
+</sql>
+
+<select id="findByID" parameterType="int" resultType="com.hwadee.model.StaffList">
+		SELECT * FROM stafflist
+	    WHERE
+		staffID=#{id}
+		ORDER BY staffID DESC
+	</select>
+	
+	<select id="findAll" parameterType="int" resultType="com.hwadee.model.StaffList">
+		SELECT
+		<include refid="a"></include>
+		 FROM stafflist
+	</select>
+	
+	<insert id="insert" parameterType="com.hwadee.model.StaffList" useGeneratedKeys="true" keyProperty="staffId">
+		INSERT INTO 
+			stafflist(staffID,staffName,workStatus)
+		VALUES("${staffId}","${staffName}","${workStatus}")
+	</insert>
+	
+	<delete id="delete" parameterType="int">
+		DELETE stafflist  WHERE staffID = #{id}
+	</delete>
+	
+	<update id="update" parameterType="int">
+		UPDATE stafflist SET workStatus=${workStatus} WHERE staffID=${staffId}
+	</update>
+ </mapper>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hwadee.dao.MissionListDao">
+	
+
+
+<sql id="a">
+   missionID,userID,staffID,missionStatus,missionTime,missionType,description,staffCost,finishTime,address
+</sql>
+
+<select id="findByID" parameterType="int" resultType="com.hwadee.model.MissionList">
+		SELECT * FROM missionlist
+	    WHERE
+		missionID = #{id}
+	</select>
+
+	<select id="findByUserId" parameterType="String" resultType="com.hwadee.model.MissionList">
+		SELECT * FROM missionlist
+		WHERE
+		<if test ="userId != null">
+			userId like #{userId}
+		</if>
+		ORDER BY missionID DESC
+	</select>
+	<select id="findAll" parameterType="int" resultType="com.hwadee.model.MissionList">
+		SELECT 
+		<include refid="a"></include>
+		 FROM missionlist
+	</select>
+	<select id="findMission" parameterType="int" resultType="com.hwadee.model.MissionList">
+		SELECT
+		<include refid="a"></include>
+		FROM missionlist
+		WHERE staffID &lt;&gt; 0
+	</select>
+	
+	<insert id="insert" parameterType="com.hwadee.model.MissionList" useGeneratedKeys="true" keyProperty="missionId">
+		INSERT INTO 
+			missionlist(userID,staffID,missionStatus,missionTime,missionType,description,finishTime,staffCost,address)
+		VALUES(#{userId},#{staffId},#{missionStatus},#{missionTime},#{missionType},#{description},#{finishTime},#{staffCost},#{address})
+	</insert>
+	
+	<delete id="delete" parameterType="int">
+		DELETE FROM missionlist  WHERE missionID = #{id}
+	</delete>
+	
+	<update id="update" parameterType="com.hwadee.model.MissionList">
+		UPDATE missionlist SET missionStatus=#{missionStatus},finishTime=#{finishTime},staffCost=#{staffCost}WHERE missionId=#{missionId} AND staffId=#{staffId}
+	</update>
+ </mapper>
